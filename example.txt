@@ -1,0 +1,23 @@
+import './App.css';
+import { useState } from 'react';
+
+function App() {
+  let [val , setval ] = useState("hello");
+  let [val1 , setval1 ] = useState(12);
+  let [ans , setans ] = useState();
+
+  const change = () => {
+    ans = setans(parseInt(val)+parseInt(val1))
+  }
+  return (
+    <>
+    <input type='text' onChange={(e)=>{setval(e.target.value)}} ></input>
+    <input type='text' onChange={(e)=>{setval(e.target.value)}} ></input>
+    <input type='button' value={"click hear"} onClick={change}></input>
+    <input type='text' value={ans}></input>
+
+    </>
+  );
+}
+
+export default App;
